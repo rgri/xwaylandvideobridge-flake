@@ -26,16 +26,16 @@
       "flake": false,
       "locked": {
         "host": "invent.kde.org",
-        "lastModified": 1679129806,
-        "narHash": "sha256-gfQkOIZegxdFQ9IV2Qp/lLRtfI5/g6bDD3XRBdLh4q0=",
-        "owner": "davidedmundson",
+        "lastModified": 1687057635,
+        "narHash": "sha256-COv3lQuJ4LO6iThAy9lrfYPKkZTkiVSvqBp2xzPHKKw=",
+        "owner": "system",
         "repo": "xwaylandvideobridge",
-        "rev": "b876b5f3ee5cc810c99b08e8f0ebb29553e45e47",
+        "rev": "a9c40f8cda1016d20cea80ecdbfc90637c6f24dd",
         "type": "gitlab"
       },
       "original": {
         "host": "invent.kde.org",
-        "owner": "davidedmundson",
+        "owner": "system",
         "repo": "xwaylandvideobridge",
         "type": "gitlab"
       }

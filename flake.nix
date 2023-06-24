@@ -4,7 +4,7 @@
     # nwg-look.inputs.nixpkgs.follows = nixpkgs;
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     xwaylandvideobridge-git = {
-      url = "gitlab:davidedmundson/xwaylandvideobridge?host=invent.kde.org";
+      url = "gitlab:system/xwaylandvideobridge?host=invent.kde.org";
       flake = false;
     };
   };
@@ -15,8 +15,8 @@
         pname = "xwaylandvideobridge";
         version = "unstable-2023-06-23";
 
-        patches = [ "cursor-mode.patch" ];
         src = xwaylandvideobridge-git;
+        patches = [ ./cursor-mode.patch ];
 
         nativeBuildInputs = [ cmake extra-cmake-modules pkg-config ];
 
