@@ -7,15 +7,11 @@
       url = "gitlab:davidedmundson/xwaylandvideobridge?host=invent.kde.org";
       flake = false;
     };
-    kpipewire = {
-      url = "gitlab:plasma/kpipewire?host=invent.kde.org";
-      flake = false;
-    };
   };
-  outputs = { self, nixpkgs, xwaylandvideobridge-git, kpipewire, ... }@inp:
+  outputs = { self, nixpkgs, xwaylandvideobridge-git, ... }@inp:
     let pkgs = nixpkgs.legacyPackages.x86_64-linux;
     in with pkgs; {
-      xwaylandvideobridge = mkDerivation rec {
+      xwaylandvideobridge = stdenv.mkDerivation rec {
         pname = "xwaylandvideobridge";
         version = "unstable-2023-06-23";
 
@@ -28,7 +24,7 @@
           qt5.qtquickcontrols2
           qt5.qtx11extras
           libsForQt5.kdelibs4support
-          kpipewire
+          libsForQt5.kpipewire
         ];
 
         dontWrapQtApps = true;

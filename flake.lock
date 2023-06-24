@@ -1,0 +1,46 @@
+{
+  "nodes": {
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1687502512,
+        "narHash": "sha256-dBL/01TayOSZYxtY4cMXuNCBk8UMLoqRZA+94xiFpJA=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "3ae20aa58a6c0d1ca95c9b11f59a2d12eebc511f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "nixpkgs": "nixpkgs",
+        "xwaylandvideobridge-git": "xwaylandvideobridge-git"
+      }
+    },
+    "xwaylandvideobridge-git": {
+      "flake": false,
+      "locked": {
+        "host": "invent.kde.org",
+        "lastModified": 1679129806,
+        "narHash": "sha256-gfQkOIZegxdFQ9IV2Qp/lLRtfI5/g6bDD3XRBdLh4q0=",
+        "owner": "davidedmundson",
+        "repo": "xwaylandvideobridge",
+        "rev": "b876b5f3ee5cc810c99b08e8f0ebb29553e45e47",
+        "type": "gitlab"
+      },
+      "original": {
+        "host": "invent.kde.org",
+        "owner": "davidedmundson",
+        "repo": "xwaylandvideobridge",
+        "type": "gitlab"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
