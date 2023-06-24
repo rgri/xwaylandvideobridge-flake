@@ -6,11 +6,11 @@
     xwaylandvideobridge-git = {
       url = "gitlab:davidedmundson/xwaylandvideobridge?host=invent.kde.org";
       flake = false;
-
     };
-    patch.url =
-      "https+aur.archlinux.org/packages/xwaylandvideobridge-cursor-mode-2-git";
-    patch.flake = false;
+    patch = {
+      url = "file:./cursor-mode.patch";
+      flake = false;
+    };
   };
   outputs = { self, patch, nixpkgs, xwaylandvideobridge-git, ... }@inp:
     let pkgs = nixpkgs.legacyPackages.x86_64-linux;
@@ -19,7 +19,7 @@
         pname = "xwaylandvideobridge";
         version = "unstable-2023-06-23";
 
-        patches = [ patch/cursor-mode.patch ];
+        patches = [ patch ];
         src = xwaylandvideobridge-git;
 
         nativeBuildInputs = [ cmake extra-cmake-modules pkg-config ];
